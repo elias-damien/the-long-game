@@ -1,9 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>The Long Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Long Game</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>The Long Game</h1>
+
+<div class="container">
+
+  <h1>The Long Game</h1>
+
+  <div class="card">
+    <h2>Progression</h2>
+
+    <p>Niveau : <span id="level">1</span></p>
+    <p>XP : <span id="xp">0</span></p>
+
+    <p>Pas cumulés : <span id="stepsTotal">0</span></p>
+    <p>Km rameur : <span id="distanceTotal">0</span></p>
+    <p>Temps rameur : <span id="durationTotal">0</span> min</p>
+    <p>Séances : <span id="sessionsTotal">0</span></p>
+  </div>
+
+  <div class="card">
+
+    <h2>Ajouter une journée</h2>
+
+    <label>Pas</label>
+    <input type="number" id="steps">
+
+    <label>Junk Food</label>
+    <select id="junkFood">
+      <option value="false">Non</option>
+      <option value="true">Oui</option>
+    </select>
+
+    <label>Alcool</label>
+    <select id="alcohol">
+      <option value="false">Non</option>
+      <option value="true">Oui</option>
+    </select>
+
+    <label>Sport aujourd'hui ?</label>
+    <select id="training">
+      <option value="false">Non</option>
+      <option value="true">Oui</option>
+    </select>
+
+    <div id="trainingFields">
+
+      <label>Distance (km)</label>
+      <input type="number" step="0.1" id="distance">
+
+      <label>Durée (min)</label>
+      <input type="number" id="duration">
+
+      <label>CPM moyen</label>
+      <input type="number" id="cpm">
+
+    </div>
+
+    <button id="saveBtn">Enregistrer la journée</button>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
